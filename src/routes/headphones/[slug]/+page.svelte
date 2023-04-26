@@ -1,17 +1,23 @@
 <script>
-     import Cart from "../../../components/Cart.svelte";
-     import db from "../../../stores/ecommerceStore";
+     // import Cart from "../../../components/Cart.svelte";
+     import { preferences } from "../../../stores/ecommerceStore";
      export let data;
 
      const addProductToCart = () => {
-          //add item to cart
+          preferences.update(currentData => {
+               let copiedData = [...currentData];
+               let updatedData = copiedData.find(data => data.title === "cart");
+               updatedData.products = [...updatedData.products, {title: "hanging"}];
+               
+               return copiedData;
+          });
      }
  </script>
  
  <h1>{data?.slug}</h1>
  <br>
  <div>
-     {#each $db as product}
+     {#each $preferences as product}
           {#if product?.title === "headphones"}
                {#each product?.products as item (item?.id)}
                     {#if item?.slug === data?.slug}

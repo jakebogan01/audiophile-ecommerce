@@ -1,9 +1,9 @@
 <script>
-     import db from "../../stores/ecommerceStore";
+     import { preferences } from "../../stores/ecommerceStore";
 </script>
 
 <div>
-     {#each $db as product}
+     {#each $preferences as product}
           {#if product?.title === "headphones"}
                {#each product?.products as item (item?.id)}
                     <a href="/headphones/{item?.slug}" class="block">{item?.title}</a>
