@@ -1,5 +1,5 @@
 <script>
-     import { onMount } from 'svelte';
+     import { onMount, afterUpdate } from 'svelte';
      import { preferences } from "/src/stores/ecommerceStore";
 
      let products = [];
@@ -9,52 +9,41 @@
      let tax = 100;
      let grandTotal;
 
-     onMount(() => {
+     const updateProducts = () => {
           products = $preferences.filter((product) => {
                return product.purchased === true;
           });
+     }
+
+     onMount(() => {
+          updateProducts();
 
           products = [...products];
-          // $preferences.find(data => data.title === "speakers").products.map(
-          // (product) => {
-          //      if (product.purchased) {
-          //           products.push(product);
-          //      }
-          // });
-          // $preferences.find(data => data.title === "earphones").products.map(
-          // (product) => {
-          //      if (product.purchased) {
-          //           products.push(product);
-          //      }
-          // });
 
-          // products = [...products];
-
-          // products.map((item) => {
-          //      let numberOfProducts = item.price * item.quantity;
-          //      total.push(numberOfProducts);
-          // })
+          products.map((item) => {
+               let numberOfProducts = item.price * item.quantity;
+               total.push(numberOfProducts);
+          })
           
-          // total = [...total];
+          total = [...total];
 
-          // result = total.reduce((a, b) => {
-          //      return a + b;
-          // }, 0);
+          result = total.reduce((a, b) => {
+               return a + b;
+          }, 0);
 
-          // grandTotal = result + shipping + tax;
+          grandTotal = result + shipping + tax;
      })
 
-     const updateQuantity = (id, type, add) => {
+     const updateQuantity = (id, add) => {
           preferences.update(currentData => {
                let copiedData = [...currentData];
-               let updatedData = copiedData.find(data => data.title === type);
-               let productData = updatedData.products.find(product => product.id === id);
+               let updatedData = copiedData.find(product => product.id === id);
 
                if (add) {
-                    productData.quantity += 1;
+                    updatedData.quantity += 1;
                } else {
-                    if (!productData.quantity <= 0) {
-                         productData.quantity -= 1;
+                    if (!updatedData.quantity <= 0) {
+                         updatedData.quantity -= 1;
                     }
                }
 
@@ -63,6 +52,15 @@
 
           products = [...products];
      }
+
+	afterUpdate(() => {
+		products.map((test) => {
+               if (test.quantity === 0) {
+                    test.purchased = false;
+                    updateProducts();
+               }
+          });
+	});
 </script>
 
 <h1>Cart</h1>
@@ -71,18 +69,16 @@
      {#each products as product}
           <p>{product?.title}, <span>quantity: {product?.quantity}</span></p>
           <p>price: ${product?.price * product?.quantity}</p>
+          <button type="button" on:click={()=>{updateQuantity(product?.id, true)}}>add</button>
+          <button type="button" on:click={()=>{updateQuantity(product?.id, false)}}>remove</button>
      {/each}
-</div>
-<div>
-     <!-- {#each products as item}
-          <p>{item?.title} <span>{item?.quantity}</span></p>
-          <p>{item?.price * item?.quantity}</p>
-          <button type="button" on:click={()=>{updateQuantity(item?.id, item?.type, true)}}>add</button>
-          <button type="button" on:click={()=>{updateQuantity(item?.id, item?.type, false)}}>remove</button>
-     {/each}
+     <br>
      <br>
      <p>all products {result}</p>
      <p>shipping {shipping}</p>
      <p>vat {tax}</p>
-     <p>total {grandTotal}</p> -->
+     <p>total {grandTotal}</p>
+     <br>
+     <br>
+     <a href="/">home</a>
 </div>
