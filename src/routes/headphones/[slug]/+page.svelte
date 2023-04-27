@@ -2,32 +2,49 @@
      import { preferences } from "../../../stores/ecommerceStore";
      export let data;
 
+     let numberOfProducts = 1;
+
      const addProductToCart = (id) => {
           preferences.update(currentData => {
                let copiedData = [...currentData];
-               let updatedData = copiedData.find(data => data.title === "headphones");
-               let productData = updatedData.products.find(product => product.id === id);
-               
-               productData.purchased = true;
-               productData.quantity = 1;
+               let updatedData = copiedData.find(product => product.id === id);
+
+               if (numberOfProducts >= 1) {
+                    updatedData.purchased = true;
+                    updatedData.quantity = numberOfProducts;
+               }
 
                return copiedData;
           });
      }
- </script>
- 
- <h1>{data?.slug}</h1>
- <br>
- <div>
-     {#each $preferences as product}
-          {#if product?.title === "headphones"}
-               {#each product?.products as item (item?.id)}
-                    {#if item?.slug === data?.slug}
-                         <p>{item?.title}</p>
 
-                         <button type="button" class="bg-blue-300" on:click={()=>{addProductToCart(item?.id)}}>purchase</button>
-                    {/if}
-               {/each}
+     const update = (add) => {
+          if (add) {
+               numberOfProducts++;
+          } else {
+               if (!numberOfProducts <= 1 && numberOfProducts !== 1) {
+                    numberOfProducts--;
+               }
+          }
+     }
+</script>
+ 
+<h1>{data?.slug}</h1>
+<br>
+<div>
+     {#each $preferences as product}
+          {#if product?.type === "headphones" && product?.slug === data?.slug}
+               <p>{product?.title}</p>
+               <p>{product?.price}</p>
+
+               <button type="button" class="bg-blue-300" on:click={()=>{addProductToCart(product?.id)}}>purchase</button>
+
+               <br>
+
+               <span>{numberOfProducts}</span>
+               <button type="button" class="bg-blue-300" on:click={()=>{update(true)}}>add</button>
+               <button type="button" class="bg-blue-300" on:click={()=>{update(false)}}>remove</button>
           {/if}
      {/each}
- </div>
+</div>
+<a href="/checkout">checkout</a>
