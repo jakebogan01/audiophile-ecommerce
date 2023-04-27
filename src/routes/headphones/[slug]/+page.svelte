@@ -2,12 +2,15 @@
      import { preferences } from "../../../stores/ecommerceStore";
      export let data;
 
-     const addProductToCart = () => {
+     const addProductToCart = (id) => {
           preferences.update(currentData => {
                let copiedData = [...currentData];
-               let updatedData = copiedData.find(data => data.title === "cart");
-               updatedData.products = [...updatedData.products, {title: "hanging"}];
+               let updatedData = copiedData.find(data => data.title === "headphones");
+               let productData = updatedData.products.find(product => product.id === id);
                
+               productData.purchased = true;
+               productData.quantity = 1;
+
                return copiedData;
           });
      }
@@ -22,7 +25,7 @@
                     {#if item?.slug === data?.slug}
                          <p>{item?.title}</p>
 
-                         <button type="button" class="bg-blue-300" on:click={()=>{addProductToCart()}}>purchase</button>
+                         <button type="button" class="bg-blue-300" on:click={()=>{addProductToCart(item?.id)}}>purchase</button>
                     {/if}
                {/each}
           {/if}
