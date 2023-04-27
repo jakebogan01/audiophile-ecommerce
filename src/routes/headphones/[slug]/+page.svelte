@@ -1,5 +1,4 @@
 <script>
-     // import Cart from "../../../components/Cart.svelte";
      import { preferences } from "../../../stores/ecommerceStore";
      export let data;
 
@@ -29,4 +28,3 @@
           {/if}
      {/each}
  </div>
- <!-- <Cart /> -->
