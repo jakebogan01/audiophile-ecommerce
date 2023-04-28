@@ -1,5 +1,4 @@
 <script>
-     import { onMount, afterUpdate } from 'svelte';
      import { preferences } from "/src/stores/ecommerceStore";
 
      let products = [];
@@ -7,7 +6,7 @@
      let result;
      let shipping = 50;
      let tax = 100;
-     let grandTotal;
+     $: grandTotal = result + shipping + tax;
 
      const updateProducts = () => {
           products = $preferences.filter((product) => {
@@ -15,10 +14,12 @@
           });
      }
 
-     onMount(() => {
+     $: {
           updateProducts();
 
           products = [...products];
+
+          total.splice(0, 2);
 
           products.map((item) => {
                let numberOfProducts = item.price * item.quantity;
@@ -31,8 +32,13 @@
                return a + b;
           }, 0);
 
-          grandTotal = result + shipping + tax;
-     })
+          products.map((item) => {
+               if (item.quantity === 0) {
+                    item.purchased = false;
+                    updateProducts();
+               }
+          });
+     }
 
      const updateQuantity = (id, add) => {
           preferences.update(currentData => {
@@ -52,15 +58,6 @@
 
           products = [...products];
      }
-
-	afterUpdate(() => {
-		products.map((test) => {
-               if (test.quantity === 0) {
-                    test.purchased = false;
-                    updateProducts();
-               }
-          });
-	});
 </script>
 
 <h1>Cart</h1>
