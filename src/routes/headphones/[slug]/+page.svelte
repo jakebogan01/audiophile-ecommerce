@@ -33,7 +33,7 @@
 <br>
 <div>
      {#each $preferences as product}
-          {#if product?.type === "headphones" && product?.slug === data?.slug}
+          {#if product?.category === "headphones" && product?.slug === data?.slug}
                <p>{product?.title}</p>
                <p>{product?.price}</p>
 

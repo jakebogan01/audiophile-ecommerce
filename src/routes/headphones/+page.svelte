@@ -4,7 +4,7 @@
 
 <div>
      {#each $preferences as product}
-          {#if product?.type === "headphones"}
+          {#if product?.category === "headphones"}
                <a href="/headphones/{product?.slug}" class="block">{product?.title}</a>
           {/if}
      {/each}
