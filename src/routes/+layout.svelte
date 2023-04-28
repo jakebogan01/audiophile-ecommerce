@@ -1,7 +1,11 @@
 <script>
      import "../app.css";
+     import Footer from "../components/Footer.svelte";
+     import Nav from "../components/Nav.svelte";
 </script>
 
-<div class="font-manrope font-medium leading-[1.5625rem] text-[0.9375rem] text-black">
+<Nav />
+<main class="font-manrope font-medium leading-[1.5625rem] text-[0.9375rem] text-black">
      <slot />
-</div>
+</main>
+<Footer />
