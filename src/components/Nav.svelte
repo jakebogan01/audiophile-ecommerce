@@ -2,7 +2,7 @@
      let showMenu = false;
 </script>
 
-<nav class="bg-[#141414]">
+<nav class="bg-[#191A1A]">
      <div class="mx-auto max-w-7xl px-4 border-b border-[#2C2C2C]">
           <div class="relative flex h-[5.625rem] items-center justify-between">
                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
