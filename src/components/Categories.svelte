@@ -1,4 +1,4 @@
-<div class="flex flex-col space-y-[4.5rem] px-6 py-[5.75rem]">
+<section class="flex flex-col space-y-[4.5rem] px-6 py-[5.75rem]">
      <div class="relative bg-dark-gray pt-[5.1rem] pb-[1.375rem] rounded-lg">
           <img src="/shared/desktop/image-category-thumbnail-headphones.png" alt="headphones" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-14 h-[8.6875rem]">
           <div class="text-center">
@@ -37,4 +37,4 @@
                </div>
           </div>
      </div>
-</div>
+</section>
