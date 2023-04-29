@@ -13,6 +13,9 @@ export default {
                     "dark-gray": "#F1F1F1",
                     "light-gray": "#FAFAFA",
                },
+               screens: {
+                    desktop: "1440px",
+               },
           },
      },
      plugins: [],
