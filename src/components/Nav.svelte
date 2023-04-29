@@ -1,8 +1,17 @@
 <script>
+     import { page } from '$app/stores';
+     
      let showMenu = false;
+     let path;
+
+     function getPath(currentPath) {
+          path = currentPath;
+     }
+
+    $: getPath($page.url.pathname);
 </script>
 
-<nav class="sticky top-0 bg-[#191A1A] opacity-90 z-50">
+<nav class="sticky top-0 opacity-90 z-50 {(path === "/") ? "bg-[#191A1A]" : "bg-black"}">
      <div class="mx-auto max-w-[69.375rem] px-4 desktop:px-0 border-b border-[#2C2C2C]">
           <div class="relative flex h-[5.625rem] items-center justify-between">
                <div class="desktop:hidden absolute inset-y-0 left-0 flex items-center">
@@ -36,10 +45,10 @@
      </div>
      <div class="absolute bg-black w-full desktop:hidden {showMenu ? "block" : "hidden"}" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
-               <a href="/" class="bg-[#191919] text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
-               <a href="/headphones" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">HEADPHONES</a>
-               <a href="/speakers" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPEAKERS</a>
-               <a href="/earphones" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">EARPHONES</a>
+               <a href="/" on:click={()=>{showMenu = false}} class="{(path === "/") ? "bg-[#191919]" : ""} text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
+               <a href="/headphones" on:click={()=>{showMenu = false}} class="{(path === "/headphones") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">HEADPHONES</a>
+               <a href="/speakers" on:click={()=>{showMenu = false}} class="{(path === "/speakers") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPEAKERS</a>
+               <a href="/earphones" on:click={()=>{showMenu = false}} class="{(path === "/earphones") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">EARPHONES</a>
           </div>
      </div>
 </nav>
