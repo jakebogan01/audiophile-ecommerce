@@ -1,5 +1,5 @@
-<section class="flex flex-col space-y-[4.5rem] px-6 py-[5.75rem]">
-     <div class="relative bg-dark-gray pt-[5.1rem] pb-[1.375rem] rounded-lg">
+<section class="flex justify-center items-center flex-col md:flex-row space-y-[4.5rem] md:space-y-0 md:space-x-2.5 px-6 py-[5.75rem] md:mt-12">
+     <div class="relative bg-dark-gray max-w-[21.875rem] w-full pt-[5.1rem] pb-[1.375rem] rounded-lg">
           <img src="/shared/desktop/image-category-thumbnail-headphones.png" alt="headphones" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-14 h-[8.6875rem]">
           <div class="text-center">
                <span class="font-bold text-[0.9375rem] tracking-[0.066875rem]">HEADPHONES</span>
@@ -12,7 +12,7 @@
           </div>
      </div>
      
-     <div class="relative bg-dark-gray pt-[5.1rem] pb-[1.375rem] rounded-lg">
+     <div class="relative bg-dark-gray max-w-[21.875rem] w-full pt-[5.1rem] pb-[1.375rem] rounded-lg">
           <img src="/shared/desktop/image-category-thumbnail-speakers.png" alt="headphones" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-14 h-[8.6875rem]">
           <div class="text-center">
                <span class="font-bold text-[0.9375rem] tracking-[0.066875rem]">SPEAKERS</span>
@@ -25,7 +25,7 @@
           </div>
      </div>
      
-     <div class="relative bg-dark-gray pt-[5.1rem] pb-[1.375rem] rounded-lg">
+     <div class="relative bg-dark-gray max-w-[21.875rem] w-full pt-[5.1rem] pb-[1.375rem] rounded-lg">
           <img src="/shared/desktop/image-category-thumbnail-earphones.png" alt="headphones" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-14 h-[8.6875rem]">
           <div class="text-center">
                <span class="font-bold text-[0.9375rem] tracking-[0.066875rem]">EARPHONES</span>
