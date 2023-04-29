@@ -5,3 +5,36 @@
 body {
      background-color: #000000;
 }
+header {
+     background-image: url(/home/mobile/image-header.jpg);
+}
+.addTwo {
+     background-image: url(/home/mobile/image-speaker-zx7.jpg);
+}
+.addThree {
+     background-image: url(/home/mobile/image-earphones-yx1.jpg);
+}
+@media (min-width: 640px) {
+     .addThree {
+          background-image: url(/home/tablet/image-earphones-yx1.jpg);
+     }
+}
+@media (min-width: 768px) {
+     header {
+          background-image: url(/home/tablet/image-header.jpg);
+     }
+     .addTwo {
+          background-image: url(/home/tablet/image-speaker-zx7.jpg);
+     }
+}
+@media (min-width: 1440px) {
+     header {
+          background-image: url(/home/desktop/image-hero.jpg);
+     }
+     .addTwo {
+          background-image: url(/home/desktop/image-speaker-zx7.jpg);
+     }
+     .addThree {
+          background-image: url(/home/desktop/image-earphones-yx1.jpg);
+     }
+}
