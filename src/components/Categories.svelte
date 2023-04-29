@@ -1,4 +1,4 @@
-<section class="flex justify-center items-center flex-col md:flex-row space-y-[4.5rem] md:space-y-0 md:space-x-2.5 px-6 py-[5.75rem] md:mt-12">
+<section class="flex justify-center items-center flex-col md:flex-row space-y-[4.5rem] md:space-y-0 md:space-x-2.5 px-6 md:px-0 py-[5.75rem] md:mt-12 max-w-[43.0625rem] mx-auto">
      <div class="relative bg-dark-gray max-w-[21.875rem] w-full pt-[5.1rem] pb-[1.375rem] rounded-lg">
           <img src="/shared/desktop/image-category-thumbnail-headphones.png" alt="headphones" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-14 h-[8.6875rem]">
           <div class="text-center">
