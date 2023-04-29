@@ -19,10 +19,10 @@
                     </div>
                     <div class="hidden md:ml-6 desktop:block desktop:ml-auto desktop:mr-[21.875rem]">
                          <div class="flex space-x-4">
-                              <a href="#" class="bg-gray-900 desktop:bg-transparent hover:bg-gray-700 text-white rounded-md px-3 py-2 text-[0.8125rem] font-bold" aria-current="page">Dashboard</a>
-                              <a href="#" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">Team</a>
-                              <a href="#" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">Projects</a>
-                              <a href="#" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">Calendar</a>
+                              <a href="/" class="bg-gray-900 desktop:bg-transparent hover:bg-gray-700 text-white rounded-md px-3 py-2 text-[0.8125rem] font-bold" aria-current="page">HOME</a>
+                              <a href="/headphones" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">HEADPHONES</a>
+                              <a href="/speakers" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">SPEAKERS</a>
+                              <a href="/earphones" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">EARPHONES</a>
                          </div>
                     </div>
                </div>
@@ -34,12 +34,12 @@
                </div>
           </div>
      </div>
-     <div class="absolute bg-black w-full md:hidden {showMenu ? "block" : "hidden"}" id="mobile-menu">
+     <div class="absolute bg-black w-full desktop:hidden {showMenu ? "block" : "hidden"}" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
-               <a href="#" class="bg-[#191919] text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+               <a href="/" class="bg-[#191919] text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
+               <a href="/headphones" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">HEADPHONES</a>
+               <a href="/speakers" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPEAKERS</a>
+               <a href="/earphones" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">EARPHONES</a>
           </div>
      </div>
 </nav>
