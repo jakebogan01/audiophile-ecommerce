@@ -1,11 +1,20 @@
 <script>
-     import { preferences } from "../../stores/ecommerceStore";
+     import About from "../../components/About.svelte";
+     import Categories from "../../components/Categories.svelte";
+     import Category from "../../components/shared/Category.svelte";
+     import Products from "../../components/Products.svelte";
 </script>
 
 <div>
-     {#each $preferences as product}
-          {#if product?.category === "earphones"}
-               <a href="/earphones/{product?.slug}" class="block">{product?.title}</a>
-          {/if}
-     {/each}
+     <Category>
+          <h1>EARPHONES</h1>
+     </Category>
+
+     <div class="bg-white">
+          <Products category="earphones" productOrderOne="desktop:flex-row" />
+
+          <Categories />
+
+          <About topMargin="mt-6" />
+     </div>
 </div>

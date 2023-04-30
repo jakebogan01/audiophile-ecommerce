@@ -2,7 +2,7 @@
      import About from "../../components/About.svelte";
      import Categories from "../../components/Categories.svelte";
      import Category from "../../components/shared/Category.svelte";
-     import Headphones from "../../components/Headphones.svelte";
+     import Products from "../../components/Products.svelte";
 </script>
 
 <div>
@@ -11,7 +11,7 @@
      </Category>
 
      <div class="bg-white">
-          <Headphones category="headphones" />
+          <Products category="headphones" />
 
           <Categories />
 

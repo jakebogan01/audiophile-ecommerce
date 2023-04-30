@@ -333,6 +333,6 @@ export const preferences = persisted("preferences", [
           purchased: false,
           quantity: 1,
           new: true,
-          category: "speakers",
+          category: "earphones",
      },
 ]);
