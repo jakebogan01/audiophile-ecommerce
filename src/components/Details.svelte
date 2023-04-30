@@ -46,7 +46,7 @@
      
                               <h1 class="max-w-[18.75rem] md:max-w-[27.8125rem] desktop:ml-0 font-bold text-[1.75rem] desktop:text-[2.5rem] tracking-[0.080625rem] leading-[2.5rem] md:leading-[2rem] desktop:leading-[2.75rem] my-6 uppercase">{product?.title}</h1>
                               <p class="max-w-[21.8125rem] md:max-w-[27.8125rem] desktop:ml-0 font-medium text-[0.9375rem] text-[#7D7D7D] leading-[1.5625rem]">{product?.description}</p>
-                              <span class="block font-bold text-lg tracking-[0.080625rem] mt-8">${product?.price.toLocaleString("en-US")}</span>
+                              <span class="block font-bold text-lg tracking-[0.080625rem] mt-8">$ {product?.price.toLocaleString("en-US")}</span>
                               
                               <div class="flex space-x-3 items-center">
                                    <div class="flex items-center bg-dark-gray text-[#B5B5B5] h-12 w-[7.5rem] text-center mt-8">

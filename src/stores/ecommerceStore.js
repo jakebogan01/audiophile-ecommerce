@@ -57,6 +57,7 @@ export const preferences = persisted("preferences", [
           quantity: 1,
           new: true,
           category: "headphones",
+          cart: "/cart/image-xx99-mark-two-headphones.jpg",
      },
      {
           id: 2,
@@ -110,6 +111,7 @@ export const preferences = persisted("preferences", [
           quantity: 1,
           new: false,
           category: "headphones",
+          cart: "/cart/image-xx99-mark-one-headphones.jpg",
      },
      {
           id: 3,
@@ -163,6 +165,7 @@ export const preferences = persisted("preferences", [
           quantity: 1,
           new: false,
           category: "headphones",
+          cart: "/cart/image-xx59-headphones.jpg",
      },
      {
           id: 4,
@@ -220,6 +223,7 @@ export const preferences = persisted("preferences", [
           quantity: 1,
           new: true,
           category: "speakers",
+          cart: "/cart/image-zx9-speaker.jpg",
      },
      {
           id: 5,
@@ -277,6 +281,7 @@ export const preferences = persisted("preferences", [
           quantity: 1,
           new: false,
           category: "speakers",
+          cart: "/cart/image-zx7-speaker.jpg",
      },
      {
           id: 6,
@@ -330,9 +335,10 @@ export const preferences = persisted("preferences", [
                     desktop: "/product-yx1-earphones/desktop/image-gallery-3.jpg",
                },
           },
-          purchased: false,
+          purchased: true,
           quantity: 1,
           new: true,
           category: "earphones",
+          cart: "/cart/image-yx1-earphones.jpg",
      },
 ]);

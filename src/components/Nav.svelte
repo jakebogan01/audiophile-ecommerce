@@ -1,14 +1,16 @@
 <script>
      import { page } from '$app/stores';
+     import Cart from './Cart.svelte';
      
      let showMenu = false;
      let path;
+     let showCart = false;
 
      function getPath(currentPath) {
           path = currentPath;
      }
 
-    $: getPath($page.url.pathname);
+     $: getPath($page.url.pathname);
 </script>
 
 <nav class="sticky top-0 opacity-95 z-50 {(path === "/") ? "bg-[#191A1A]" : "bg-black"}">
@@ -36,7 +38,7 @@
                     </div>
                </div>
                <div class="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto">
-                    <button type="button" class="rounded-full p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <button type="button" on:click={()=>{showCart = !showCart}} class="rounded-full p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                          <span class="sr-only">View cart</span>
                          <img class="block h-5 w-auto" src="/shared/desktop/icon-cart.svg" alt="Shopping Cart">
                     </button>
@@ -52,3 +54,4 @@
           </div>
      </div>
 </nav>
+<Cart show={showCart} on:click={()=>{showCart = !showCart}} />
