@@ -17,6 +17,8 @@
 
                return copiedData;
           });
+
+          numberOfProducts = 1;
      }
 
      const update = (add) => {

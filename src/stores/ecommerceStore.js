@@ -335,7 +335,7 @@ export const preferences = persisted("preferences", [
                     desktop: "/product-yx1-earphones/desktop/image-gallery-3.jpg",
                },
           },
-          purchased: true,
+          purchased: false,
           quantity: 1,
           new: true,
           category: "earphones",

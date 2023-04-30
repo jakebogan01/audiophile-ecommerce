@@ -1,4 +1,5 @@
 <script>
+     import { onMount, afterUpdate } from 'svelte';
      import { preferences } from "/src/stores/ecommerceStore";
      export let show = false;
 
@@ -14,6 +15,14 @@
                return product.purchased === true;
           });
      }
+
+     onMount(() => {
+          updateProducts();
+     })
+
+     afterUpdate(() => {
+          updateProducts();
+     })
 
      $: {
           updateProducts();
@@ -60,21 +69,6 @@
           products = [...products];
      }
 </script>
-
-<!-- <div class="text-white">
-     {#each products as product}
-          <p>{product?.title}, <span>quantity: {product?.quantity}</span></p>
-          <p>price: ${product?.price * product?.quantity}</p>
-          <button type="button" on:click={()=>{updateQuantity(product?.id, true)}}>add</button>
-          <button type="button" on:click={()=>{updateQuantity(product?.id, false)}}>remove</button>
-     {/each}
-     <br>
-     <br>
-     <p>all products {result}</p>
-     <p>shipping {shipping}</p>
-     <p>vat {tax}</p>
-     <p>total {grandTotal}</p>
-</div> -->
 
 {#if show}
      <div class="relative z-40 font-manrope" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -128,7 +122,7 @@
                                              <dl class="space-y-4">
                                                   <div class="flex items-center justify-between">
                                                        <dt class="text-[0.9375rem] font-medium text-[#808080]">Total</dt>
-                                                       <dd class="ml-4 text-lg font-bold">$ {grandTotal.toLocaleString("en-US")}</dd>
+                                                       <dd class="ml-4 text-lg font-bold">$ {(result == 0) ? 0 : grandTotal.toLocaleString("en-US")}</dd>
                                                   </div>
                                              </dl>
                                         </div>
