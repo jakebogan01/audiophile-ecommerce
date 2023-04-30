@@ -8,8 +8,8 @@
 
 <div>
      <div class="bg-white">
-          <a href="/headphones" class="block font-medium text-[0.9375rem] text-[#7D7D7D] pl-6 py-[1.625rem]">Go Back</a>
-          
+          <a href="/earphones" class="inline-block font-medium text-[0.9375rem] text-[#7D7D7D] ml-6 my-[1.625rem]">Go Back</a>
+
           <Details data={data} category="headphones" />
 
           <Similar data={data} />
