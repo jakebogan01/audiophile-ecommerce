@@ -46,9 +46,9 @@
      <div class="absolute bg-black w-full desktop:hidden {showMenu ? "block" : "hidden"}" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
                <a href="/" on:click={()=>{showMenu = false}} class="{(path === "/") ? "bg-[#191919]" : ""} text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">HOME</a>
-               <a href="/headphones" on:click={()=>{showMenu = false}} class="{(path === "/headphones") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">HEADPHONES</a>
-               <a href="/speakers" on:click={()=>{showMenu = false}} class="{(path === "/speakers") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPEAKERS</a>
-               <a href="/earphones" on:click={()=>{showMenu = false}} class="{(path === "/earphones") ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">EARPHONES</a>
+               <a href="/headphones" on:click={()=>{showMenu = false}} class="{(path.includes("headphones")) ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">HEADPHONES</a>
+               <a href="/speakers" on:click={()=>{showMenu = false}} class="{(path.includes("speakers")) ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPEAKERS</a>
+               <a href="/earphones" on:click={()=>{showMenu = false}} class="{(path.includes("earphones")) ? "bg-[#191919]" : ""} text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">EARPHONES</a>
           </div>
      </div>
 </nav>

@@ -1,50 +1,21 @@
 <script>
-     import { preferences } from "../../../stores/ecommerceStore";
+     import About from "../../../components/About.svelte";
+     import Categories from "../../../components/Categories.svelte";
+     import Details from "../../../components/Details.svelte";
+     import Similar from "../../../components/Similar.svelte";
      export let data;
-
-     let numberOfProducts = 1;
-
-     const addProductToCart = (id) => {
-          preferences.update(currentData => {
-               let copiedData = [...currentData];
-               let updatedData = copiedData.find(product => product.id === id);
-
-               if (numberOfProducts >= 1) {
-                    updatedData.purchased = true;
-                    updatedData.quantity = numberOfProducts;
-               }
-
-               return copiedData;
-          });
-     }
-
-     const update = (add) => {
-          if (add) {
-               numberOfProducts++;
-          } else {
-               if (!numberOfProducts <= 1 && numberOfProducts !== 1) {
-                    numberOfProducts--;
-               }
-          }
-     }
 </script>
- 
-<h1>{data?.slug}</h1>
-<br>
+
 <div>
-     {#each $preferences as product}
-          {#if product?.category === "earphones" && product?.slug === data?.slug}
-               <p>{product?.title}</p>
-               <p>{product?.price}</p>
+     <div class="bg-white">
+          <a href="/earphones" class="block font-medium text-[0.9375rem] text-[#7D7D7D] pl-6 py-[1.625rem]">Go Back</a>
+          
+          <Details data={data} category="earphones" />
 
-               <button type="button" class="bg-blue-300" on:click={()=>{addProductToCart(product?.id)}}>purchase</button>
+          <Similar data={data} />
 
-               <br>
+          <Categories />
 
-               <span>{numberOfProducts}</span>
-               <button type="button" class="bg-blue-300" on:click={()=>{update(true)}}>add</button>
-               <button type="button" class="bg-blue-300" on:click={()=>{update(false)}}>remove</button>
-          {/if}
-     {/each}
+          <About topMargin="mt-6" />
+     </div>
 </div>
-<a href="/checkout">checkout</a>
