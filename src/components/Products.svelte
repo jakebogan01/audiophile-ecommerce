@@ -10,7 +10,7 @@
 <section class="px-6 space-y-24 pt-14 pb-16">
      {#each $preferences as product, i}
           {#if product?.category === category}
-               <div class="{(i % 2) ? productOrderOne : productOrderTwo} flex flex-col desktop:items-center space-y-10 desktop:space-y-0 desktop:space-x-[7.8125rem] max-w-[69.375rem] mx-auto">
+               <div id={product?.slug} class="{(i % 2) ? productOrderOne : productOrderTwo} flex flex-col desktop:items-center space-y-10 desktop:space-y-0 desktop:space-x-[7.8125rem] max-w-[69.375rem] mx-auto">
                     <div class="flex-1 flex justify-center items-center bg-dark-gray desktop:min-w-[33.75rem] rounded-lg overflow-hidden">
                          <img src={product?.image?.desktop} alt={product?.title} class="h-[22rem] desktop:h-[35rem] mx-auto">
                     </div>

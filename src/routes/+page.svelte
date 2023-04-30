@@ -12,7 +12,7 @@
                     <h1 class="font-bold text-white text-4xl md:text-[3.5rem] tracking-[0.080625rem] leading-[2.5rem] md:leading-[3.625rem] mt-4">XX99 Mark II<br>HeadphoneS</h1>
                     <p class="max-w-[21.8125rem] mx-auto font-medium text-[0.9375rem] text-[#C6C6C6] leading-[1.5625rem] mt-8">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                     <div class="flex justify-center desktop:justify-start">
-                         <Button>See Product</Button>
+                         <Button href="/headphones/#xx99-mark-two-headphones">See Product</Button>
                     </div>
                </div>
           </div>
@@ -31,7 +31,7 @@
                     <h4 class="text-white font-bold text-4xl md:text-[3.5rem] leading-[2.5rem] md:leading-[3.625rem] tracking-[0.080625rem] mb-6">ZX9<br>SPEAKER</h4>
                     <p class="max-w-[21.875rem] text-[#F5DED2] font-medium text-[0.9375rem] leading-[1.5625rem] mb-4">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <div class="flex justify-center desktop:justify-start">
-                         <Button color={"bg-black text-white"}>See Product</Button>
+                         <Button href="/speakers/#zx9-speaker" color={"bg-black text-white"}>See Product</Button>
                     </div>
                </div>
           </div>
@@ -39,7 +39,7 @@
           <div class="addTwo bg-center bg-no-repeat bg-cover flex items-center mx-auto max-w-[43.0625rem] desktop:max-w-[69.375rem] bg-dark-gray h-[20rem] px-7 md:px-14 rounded-lg text-center overflow-hidden">
                <div>
                     <h4 class="font-bold text-[1.75rem] leading-[2.5rem] tracking-[0.080625rem] mb-6">ZX7 SPEAKER</h4>
-                    <Button color={"bg-transparent text-black border border-black"}>See Product</Button>
+                    <Button  href="/speakers/#zx7-speaker" color={"bg-transparent text-black border border-black"}>See Product</Button>
                </div>
           </div>
 
@@ -49,7 +49,7 @@
                <div class="flex items-center justify-center w-full bg-dark-gray h-[12.5rem] sm:h-80 px-7 rounded-lg text-center overflow-hidden">
                     <div>
                          <h4 class="font-bold text-[1.75rem] leading-[2.5rem] tracking-[0.080625rem] mb-6">YX1 EARPHONES</h4>
-                         <Button color={"bg-transparent text-black border border-black"}>See Product</Button>
+                         <Button href="earphones/#yx1-wireless-earphones" color={"bg-transparent text-black border border-black"}>See Product</Button>
                     </div>
                </div>
           </div>
