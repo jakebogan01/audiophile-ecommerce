@@ -1,5 +1,5 @@
 <script>
-     export let color = "bg-dark-orange text-white";
+     export let color = "bg-dark-orange text-white hover:bg-light-orange";
      export let href = "/";
 </script>
 

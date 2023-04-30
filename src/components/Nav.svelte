@@ -50,10 +50,10 @@
                     </div>
                     <div class="hidden md:ml-6 desktop:block desktop:ml-auto desktop:mr-[21.875rem]">
                          <div class="flex space-x-4">
-                              <a href="/" class="bg-gray-900 desktop:bg-transparent hover:bg-gray-700 text-white rounded-md px-3 py-2 text-[0.8125rem] font-bold" aria-current="page">HOME</a>
-                              <a href="/headphones" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">HEADPHONES</a>
-                              <a href="/speakers" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">SPEAKERS</a>
-                              <a href="/earphones" class="text-white hover:bg-gray-700 rounded-md px-3 py-2 text-[0.8125rem] font-bold">EARPHONES</a>
+                              <a href="/" class="bg-gray-900 desktop:bg-transparent hover:bg-dark-orange text-white rounded-md px-3 py-2 text-[0.8125rem] font-bold" aria-current="page">HOME</a>
+                              <a href="/headphones" class="text-white hover:bg-dark-orange rounded-md px-3 py-2 text-[0.8125rem] font-bold">HEADPHONES</a>
+                              <a href="/speakers" class="text-white hover:bg-dark-orange rounded-md px-3 py-2 text-[0.8125rem] font-bold">SPEAKERS</a>
+                              <a href="/earphones" class="text-white hover:bg-dark-orange rounded-md px-3 py-2 text-[0.8125rem] font-bold">EARPHONES</a>
                          </div>
                     </div>
                </div>

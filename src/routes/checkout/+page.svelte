@@ -54,7 +54,7 @@
      <div class="bg-white font-manrope">
           <div class="px-6">
                <div class="max-w-[43.0625rem] desktop:max-w-[69.375rem] mx-auto">
-                    <a href="/" class="inline-block font-medium text-[0.9375rem] text-[#7D7D7D] my-[1.625rem]">Go Home</a>
+                    <a href="/" class="inline-block font-medium text-[0.9375rem] text-[#7D7D7D] hover:text-dark-orange my-[1.625rem]">Go Home</a>
                </div>
           </div>
 
@@ -321,7 +321,7 @@
                                                   </div>
           
                                                   <div class="mt-6">
-                                                       <a href="/checkout" on:click|self class="flex justify-center items-center w-full bg-dark-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">CONTINUE & PAY</a>
+                                                       <a href="/checkout" on:click|self class="flex justify-center items-center w-full bg-dark-orange hover:bg-light-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">CONTINUE & PAY</a>
                                                   </div>
                                              </section>
                                         </div>

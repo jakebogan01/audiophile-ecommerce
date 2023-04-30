@@ -52,16 +52,16 @@
                               
                               <div class="flex space-x-3 items-center">
                                    <div class="flex items-center bg-dark-gray text-[#B5B5B5] h-12 w-[7.5rem] text-center mt-8">
-                                        <button type="button" on:click={()=>{update(false)}} class="flex-1 flex justify-center items-center h-full">
+                                        <button type="button" on:click={()=>{update(false)}} class="flex-1 flex justify-center hover:text-dark-orange items-center h-full">
                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" /></svg>                                                     
                                         </button>
                                         <span class="flex-1 text-[0.8125rem] font-bold">{numberOfProducts}</span>
-                                        <button type="button" on:click={()=>{update(true)}} class="flex-1 flex justify-center items-center h-full">
+                                        <button type="button" on:click={()=>{update(true)}} class="flex-1 flex justify-center hover:text-dark-orange items-center h-full">
                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                                                     
                                         </button>
                                    </div>
      
-                                   <button type="button" on:click={()=>{addProductToCart(product?.id)}} class="flex justify-center items-center font-bold text-[0.8125rem] tracking-[0.0625rem] h-12 w-40 mt-8 bg-dark-orange text-white">ADD TO CART</button>
+                                   <button type="button" on:click={()=>{addProductToCart(product?.id)}} class="flex justify-center items-center font-bold text-[0.8125rem] tracking-[0.0625rem] h-12 w-40 mt-8 bg-dark-orange hover:bg-light-orange text-white">ADD TO CART</button>
                               </div>
                          </div>
                     </div>

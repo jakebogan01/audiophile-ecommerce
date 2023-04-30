@@ -102,11 +102,11 @@
                                                                  <p class="mt-1 text-sm font-bold text-[#808080]">$ {(product?.price * product?.quantity).toLocaleString("en-US")}</p>
                                                             </div>
                                                             <div class="flex items-center bg-dark-gray text-[#B5B5B5] h-8 w-24 text-center mt-2">
-                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, false)}} class="flex-1 flex justify-center items-center h-full">
+                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, false)}} class="flex-1 flex justify-center hover:text-dark-orange items-center h-full">
                                                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" /></svg>                                                     
                                                                  </button>
                                                                  <span class="flex-1 text-[0.8125rem] text-black font-bold">{product?.quantity}</span>
-                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, true)}} class="flex-1 flex justify-center items-center h-full">
+                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, true)}} class="flex-1 flex justify-center hover:text-dark-orange items-center h-full">
                                                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                                                     
                                                                  </button>
                                                             </div>
@@ -128,7 +128,7 @@
                                         </div>
 
                                         <div class="mt-6">
-                                             <a href="/checkout" on:click|self class="flex justify-center items-center w-full bg-dark-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">Checkout</a>
+                                             <a href="/checkout" on:click|self class="flex justify-center items-center w-full bg-dark-orange hover:bg-light-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">Checkout</a>
                                         </div>
                                    </section>
                               </form>
