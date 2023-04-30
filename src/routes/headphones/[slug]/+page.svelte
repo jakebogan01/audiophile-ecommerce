@@ -8,7 +8,11 @@
 
 <div>
      <div class="bg-white">
-          <a href="/earphones" class="inline-block font-medium text-[0.9375rem] text-[#7D7D7D] ml-6 my-[1.625rem]">Go Back</a>
+          <div class="px-6">
+               <div class="max-w-[43.0625rem] desktop:max-w-[69.375rem] mx-auto">
+                    <a href="/headphones" class="inline-block font-medium text-[0.9375rem] text-[#7D7D7D] my-[1.625rem]">Go Back</a>
+               </div>
+          </div>
 
           <Details data={data} category="headphones" />
 
