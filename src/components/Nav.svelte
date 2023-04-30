@@ -11,7 +11,7 @@
     $: getPath($page.url.pathname);
 </script>
 
-<nav class="sticky top-0 opacity-90 z-50 {(path === "/") ? "bg-[#191A1A]" : "bg-black"}">
+<nav class="sticky top-0 opacity-95 z-50 {(path === "/") ? "bg-[#191A1A]" : "bg-black"}">
      <div class="mx-auto max-w-[69.375rem] px-4 desktop:px-0 border-b border-[#2C2C2C]">
           <div class="relative flex h-[5.625rem] items-center justify-between">
                <div class="desktop:hidden absolute inset-y-0 left-0 flex items-center">
