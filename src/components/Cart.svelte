@@ -61,7 +61,7 @@
      }
 </script>
 
-<!-- <div>
+<!-- <div class="text-white">
      {#each products as product}
           <p>{product?.title}, <span>quantity: {product?.quantity}</span></p>
           <p>price: ${product?.price * product?.quantity}</p>
@@ -74,9 +74,6 @@
      <p>shipping {shipping}</p>
      <p>vat {tax}</p>
      <p>total {grandTotal}</p>
-     <br>
-     <br>
-     <a href="/">home</a>
 </div> -->
 
 {#if show}
@@ -108,15 +105,14 @@
                                                        <div class="ml-4 flex justify-between flex-1">
                                                             <div>
                                                                  <h4 class="text-[0.9375rem] font-bold">{product?.title.substring(0,10)}...</h4>
-                                                                 <p class="mt-1 text-sm font-bold text-[#808080]">$ {product?.price.toLocaleString("en-US")}</p>
+                                                                 <p class="mt-1 text-sm font-bold text-[#808080]">$ {(product?.price * product?.quantity).toLocaleString("en-US")}</p>
                                                             </div>
-
                                                             <div class="flex items-center bg-dark-gray text-[#B5B5B5] h-8 w-24 text-center mt-2">
-                                                                 <button type="button" class="flex-1 flex justify-center items-center h-full">
+                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, false)}} class="flex-1 flex justify-center items-center h-full">
                                                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" /></svg>                                                     
                                                                  </button>
-                                                                 <span class="flex-1 text-[0.8125rem] text-black font-bold">1</span>
-                                                                 <button type="button" class="flex-1 flex justify-center items-center h-full">
+                                                                 <span class="flex-1 text-[0.8125rem] text-black font-bold">{product?.quantity}</span>
+                                                                 <button type="button" on:click={()=>{updateQuantity(product?.id, true)}} class="flex-1 flex justify-center items-center h-full">
                                                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>                                                     
                                                                  </button>
                                                             </div>
@@ -132,13 +128,13 @@
                                              <dl class="space-y-4">
                                                   <div class="flex items-center justify-between">
                                                        <dt class="text-[0.9375rem] font-medium text-[#808080]">Total</dt>
-                                                       <dd class="ml-4 text-lg font-bold">$ 9,600</dd>
+                                                       <dd class="ml-4 text-lg font-bold">$ {grandTotal.toLocaleString("en-US")}</dd>
                                                   </div>
                                              </dl>
                                         </div>
 
                                         <div class="mt-6">
-                                             <button type="submit" class="w-full bg-dark-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">Checkout</button>
+                                             <a href="/checkout" class="flex justify-center items-center w-full bg-dark-orange px-4 h-12 text-[0.8125rem] font-bold text-white shadow-sm focus:outline-none">Checkout</a>
                                         </div>
                                    </section>
                               </form>
