@@ -8,12 +8,14 @@
      let result;
      let shipping = 50;
      let tax = 100;
+     let cartItems = 0;
      $: grandTotal = result + shipping + tax;
 
      const updateProducts = () => {
           products = $preferences.filter((product) => {
                return product.purchased === true;
           });
+          cartItems = products.length;
      }
 
      onMount(() => {
@@ -68,6 +70,20 @@
 
           products = [...products];
      }
+
+     const removeAll = () => {
+          preferences.update(currentData => {
+               let copiedData = [...currentData];
+               let updatedData = copiedData.filter(product => product.purchased === true);
+               updatedData.map((item) => {
+                    item.purchased = false;
+               });
+
+               return copiedData;
+          });
+
+          products = [...products];
+     }
 </script>
 
 {#if show}
@@ -79,8 +95,8 @@
                          
                          <div class="mx-auto max-w-2xl">
                               <div class="flex justify-between items-center">
-                                   <h1 class="text-lg font-bold tracking-[0.080625rem]">CART (3)</h1>
-                                   <button type="button" class="text-[0.9375rem] font-medium text-[#808080]">
+                                   <h1 class="text-lg font-bold tracking-[0.080625rem]">CART ({cartItems})</h1>
+                                   <button type="button" on:click={removeAll} class="text-[0.9375rem] font-medium text-[#808080] hover:text-dark-orange">
                                         <span>Remove all</span>
                                    </button>
                               </div>
